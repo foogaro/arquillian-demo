@@ -8,28 +8,25 @@ import javax.persistence.PersistenceContext;
  * Created by foogaro on 17/06/15.
  */
 @Stateless
-public class PersonaDAO {
+public class PersonDAO {
 
     @PersistenceContext(unitName = "jpaDemoPU")
     private EntityManager em;
 
-    public void insert(Persona persona) {
-        em.persist(persona);
+    public void insert(Person person) {
+        em.persist(person);
     }
 
-    public void update(Persona persona) {
-        em.persist(persona);
+    public void update(Person person) {
+        em.persist(person);
     }
 
-    public void merge(Persona persona) {
-        em.merge(persona);
+    public void merge(Person person) {
+        em.merge(person);
     }
 
-    public Persona find(Long id) {
-        return em.find(Persona.class,id);
+    public Person find(Long id) {
+        return em.find(Person.class, id);
     }
-
-
-
 
 }
